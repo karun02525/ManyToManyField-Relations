@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Student Info</h2>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Roll</th>
+    <th>Cenater Name</th>
+    <th>City</th>
+    <th>Created At</th>
+    <th>Update At</th>
+  </tr>
+  {% for stu in students %}
+  <tr>
+    <td>{{stu.base_id}}</td>
+    <td>{{stu.name}}</td>
+    <td>{{stu.roll}}</td>
+    <td>{{stu.cname}}</td>
+    <td>{{stu.city}}</td> 
+    <td>{{stu.created_at}}</td> 
+    <td>{{stu.updated_at}}</td> 
+   </tr>
+  {% endfor %}
+</table>
+
+<br>
+<br>
+
+<h2>Proxy Student Info</h2>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Roll</th>
+    <th>Cenater Name</th>
+    <th>City</th>
+    <th>Created At</th>
+    <th>Update At</th>
+  </tr>
+  {% for stu in proxy_students %}
+  <tr>
+    <td>{{stu.base_id}}</td>
+    <td>{{stu.name}}</td>
+    <td>{{stu.roll}}</td>
+    <td>{{stu.cname}}</td>
+    <td>{{stu.city}}</td> 
+    <td>{{stu.created_at}}</td> 
+    <td>{{stu.updated_at}}</td> 
+   </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
+
